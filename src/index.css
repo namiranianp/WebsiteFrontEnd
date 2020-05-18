@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.container {
+  position: relative;
+  width: 50%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.shiftingHeader:hover .overlay {
+  width: 100%;
+}
+
+.overlay h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%);
+  transform: translate(0%, -50%);
+  white-space: nowrap;
+}
+
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.header{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.section{
+  margin-bottom: 30px;
+}
+
+.sectionBody{
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.shiftingHeader{
+  position: fixed;
+  top: 0;
+}
+
+.TOC {
+	border-collapse: collapse;
+	margin-left: 35px;
+	margin-top: 10px;
+	font-size: 17px;
+}
+
+.TOC table, th, td {
+	border: 1px solid black;
+}
+
+.TOC td {
+	padding: 5px;
+	margin: 5px;
+}
+
+.workHist li {
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.workHist span {
+	font-size: 13px;
+	padding-left: 25px;
+	margin-top: -10px;
+}
+
+.contact td {
+	border: none;
+	height: 20px;
+	width: 300px;
+}
+
+.resume {
+	display: inline-block;
+	margin-left: 35px;
+	float: left;
 }
